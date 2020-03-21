@@ -2,22 +2,22 @@
   background-color: #e4f9f5;
   width: 200px;
   height: 200px;
-  border: solid 10px;
-  padding: 2opx;
+  position: absolute;
+  left: 200px;
 }
 
 .middle_container {
   background-color: red;
   width: 200px;
   height: 200px;
-  margin-left: 220px;
-  border: solid 20px;
+  position: absolute;
+  left: 600px;
 }
 
 .bottom_container {
   background-color: blue;
   width: 200px;
   height: 200px;
-  margin-left: 460px;
-  border: solid 10px;
+  position: absolute;
+  left: 400px;
 }
