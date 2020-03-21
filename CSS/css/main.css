@@ -5,10 +5,29 @@ body {
 
 h1 {
   font-family: "Sacramento", cursive;
+  font-size: 90px;
+  color: #66bfbf;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  color: #66bfbf;
+  font-weight: normal;
+}
+
+h3 {
+  color: #11999e;
 }
 
 p {
   font-family: "Inter", sans-serif;
+  color: #40514e;
+}
+
+a {
+  color: #11999e;
+  text-decoration: none;
 }
 
 .top_container {
@@ -27,4 +46,67 @@ p {
   position: absolute;
   left: 300px;
   bottom: 300px;
+}
+
+.skill-row {
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: left;
+  line-height: 2;
+}
+
+.computer-image {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+
+.chilli-image {
+  width: 25%;
+  float: right;
+  margin-left: 30px;
+}
+
+.middle_container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.bottom_container {
+  background-color: #66bfbf;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-link {
+  color: #11999e;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.bottom_container p {
+  color: #eaf6f6;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #11999e;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:active {
+  background-color: #11999e;
+  box-shadow: 0 5px #999;
+  transform: translateY(4px);
 }
