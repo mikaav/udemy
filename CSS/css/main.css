@@ -30,6 +30,12 @@ a {
   text-decoration: none;
 }
 
+hr {
+  border: dotted #eaf6f6;
+  border-bottom: none;
+  width: 4%;
+}
+
 .top_container {
   background-color: #e4f9f5;
   position: relative;
