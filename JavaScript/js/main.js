@@ -19,3 +19,11 @@ alert("Hello " + name.slice(0, 1).toUpperCase() + name.slice(1).toLowerCase());
 var dogAge = prompt("Enter your dog's age:");
 var dogToHuman = (dogAge - 2) * 4 + 21;
 alert("If your dog will be a Human his age will be: " + dogToHuman + " years");
+
+// Love score canculator
+
+prompt("What is your name?");
+prompt("What is their name?");
+var loveScore = Math.random() * 100;
+loveScore = Math.floor(loveScore) + 1;
+alert("Your love score is " + loveScore + "%");
