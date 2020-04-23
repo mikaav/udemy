@@ -12,9 +12,10 @@ app.get("/", function (request, response) {
 });
 
 app.post("/", function (request, response) {
-  var num1 = Number(req.body.n1);
-  var num2 = Number(req.body.n2);
+  var num1 = Number(request.body.n1);
+  var num2 = Number(request.body.n2);
   var result = num1 + num2;
+  console.log("num1");
 
   response.send("The result of the calculation is:" + result);
 
@@ -28,8 +29,8 @@ app.get("/bmicalculator", function (request, response) {
 });
 
 app.post("/bmiCalculator", function (request, response) {
-  var w1 = Number(req.body.val1);
-  var h1 = Number(req.body.val2);
+  var w1 = Number(request.body.val1);
+  var h1 = Number(request.body.val2);
   var result1 = w1 * h1;
 
   response.send("Your BMI is " + result1);
