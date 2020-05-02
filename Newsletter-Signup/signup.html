@@ -75,38 +75,43 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="main.css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
   </head>
   <body class="text-center">
-    <form class="form-signin">
+    <form class="form-signin" method="POST" action="/">
       <img class="mb-4" src="images/news.png" alt="" width="72" height="72" />
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <h1 class="h3 mb-3 font-weight-normal">Signup to my Newsletter</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
       <input
+        type="text"
+        name="fName"
+         class="form-control"
+        placeholder="First Name"
+        required
+        autofocus
+      />
+      <input
+        type="text"
+        name="lName"
+        class="form-control"
+        placeholder="Last Name"
+        required
+        autofocus
+      />
+      <input
         type="email"
-        id="inputEmail"
+        name="email"
         class="form-control"
         placeholder="Email address"
         required
         autofocus
       />
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input
-        type="password"
-        id="inputPassword"
-        class="form-control"
-        placeholder="Password"
-        required
-      />
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me" /> Remember me
-        </label>
+      
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">
-        Sign in
+        Sign Me Up
       </button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+      <p class="mt-5 mb-3 text-muted">&copy; The News since 2020</p>
     </form>
   </body>
 </html>
