@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
+const https = require("https");
 
 const app = express();
 app.use(express.static("public"));
@@ -12,11 +13,11 @@ app.get("/", function (req, res) {
 });
 
 app.post("/", function (req, res) {
-  var firstName = req.body.fName;
-  var lastName = req.body.lName;
-  var email = req.body.email;
+  const firstName = req.body.fName;
+  const lastName = req.body.lName;
+  const email = req.body.email;
 
-  var data = {
+  const data = {
     members: [
       {
         email_address: email,
@@ -39,6 +40,12 @@ app.post("/", function (req, res) {
   };
 
   const request = https.request(url, options, function (response) {
+    if (response.statusCode === 200) {
+      res.sendFile(__dirname + "/succes.html");
+    } else {
+      res.sendFile(__dirname + "/failure.html");
+    }
+
     response.on("data", function (data) {
       console.log(JSON.parse(data));
     });
@@ -46,6 +53,10 @@ app.post("/", function (req, res) {
 
   request.write(jsonData);
   request.end();
+});
+
+app.post("/failure", function (req, res) {
+  res.redirect("/");
 });
 
 app.listen(3000, function () {
