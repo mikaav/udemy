@@ -17,6 +17,8 @@ app.post("/", function (req, res) {
   const lastName = req.body.lName;
   const email = req.body.email;
 
+  console.log(firstName, lastName, email);
+
   const data = {
     members: [
       {
